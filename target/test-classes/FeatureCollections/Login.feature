@@ -1,8 +1,8 @@
 #Author: Amit Patil
 #Keywords Summary :
 #Feature: List of scenarios for Login feature
-#Date Created: 19/8/2018
-@Login
+#Date Created: 
+Login
 Feature: Login Feature
 
   Background: user is successfully logged in

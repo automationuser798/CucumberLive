@@ -1,40 +1,22 @@
 package StepDefinitions;
 
 import java.io.IOException;
-import java.net.UnknownHostException;
-import java.util.List;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
-/*import org.apache.log4j.Logger;*/
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
-
 import PageObjects.LoginPage;
 import PageObjects.MyAccountsPage;
-import Configurations.Config;
-//import MyStore.config.baseclass;
 import Configurations.Utility;
-import StepDefinitions.ServiceHooks;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import java.util.concurrent.TimeUnit;
+
 
 public class Login {
 
 	LoginPage loginpageobj = null;
 	final static Logger logger = Logger.getLogger(Login.class);
-	int counter = 1;
 	MyAccountsPage myaccountpageobj = null;
 	public static WebDriver driver = null;
 
@@ -275,7 +257,7 @@ public class Login {
 		try {
 
 			myaccountpageobj = new MyAccountsPage(Utility.driver);
-			;
+			
 
 		} catch (Exception ex) {
 

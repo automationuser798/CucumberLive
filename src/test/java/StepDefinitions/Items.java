@@ -2,22 +2,18 @@ package StepDefinitions;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.Logger;
-/*import org.apache.log4j.Logger;*/
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-
 import PageObjects.ItemsPage;
 import PageObjects.LoginPage;
 import PageObjects.MyAccountsPage;
 import PageObjects.ShoppingCartPage;
-import Configurations.Config;
 import Configurations.Utility;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
+
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+
 
 
 public class Items {

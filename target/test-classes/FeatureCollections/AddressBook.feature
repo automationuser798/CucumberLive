@@ -1,8 +1,8 @@
 #Author: Amit Patil
 #Keywords Summary :
-#Feature: List of scenarios for My Address feature.
-#Date Created: 21/4/2019
-@AddressBook
+#Feature: List of scenarios for Address Book feature.
+#Date Created: 
+AddressBook
 Feature: Address Book feature
 
     Background: user is successfully logged in

@@ -10,50 +10,49 @@ import org.openqa.selenium.support.PageFactory;
 
 
 public class ItemsPage {
-	
-		
-		WebDriver localdriverobject;
 
-		public ItemsPage (WebDriver driver) {
-			PageFactory.initElements(driver, this);
-			this.localdriverobject=driver;
-		
-			
-		}
 
-		
-		@FindBy(how = How.XPATH, using = "//input[@id='search_query_top']")
-		public WebElement ItemSearch;
-		
-		@FindBy(how = How.XPATH, using = "//*[@id=\"category\"]/div[2]/ul/li[4]")
-		public WebElement PrintedChiffonDress;
-		
-		@FindBy(how = How.XPATH, using = "//input[@id='search_query_top']")
-		public WebElement PrintedChiffonDressonDetailsPage;
-		
-		
-		                /*Page Actions*/
-		
-		
-		
-		public void SearchItem(String ItemText) 
-		
-		{
-			this.ItemSearch.sendKeys(ItemText);
-		}
-		
-		
-		public void ClickPrintedChiffonDress() 
-		{
-			PrintedChiffonDress.click();
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	WebDriver localdriverobject;
+
+	public ItemsPage (WebDriver driver) {
+		PageFactory.initElements(driver, this);
+		this.localdriverobject=driver;
+
+
+	}
+
+
+	@FindBy(how = How.XPATH, using = "//input[@id='search_query_top']")
+	public WebElement ItemSearch;
+
+	@FindBy(how = How.XPATH, using = "//*[@id=\"category\"]/div[2]/ul/li[4]")
+	public WebElement PrintedChiffonDress;
+
+	@FindBy(how = How.XPATH, using = "//input[@id='search_query_top']")
+	public WebElement PrintedChiffonDressonDetailsPage;
+
+
+
+
+
+	public void SearchItem(String ItemText) 
+
+	{
+		this.ItemSearch.sendKeys(ItemText);
+	}
+
+
+	public void ClickPrintedChiffonDress() 
+	{
+		PrintedChiffonDress.click();
+	}
+
+
+
+
+
+
+
+
+
 }

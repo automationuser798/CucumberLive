@@ -1,7 +1,7 @@
 #Author: Amit Patil
 #Keywords Summary :
 #Feature: List of scenarios for Items feature.
-#Date Created: 21/4/2019
+#Date Created: 
 @Items
 Feature: Items
 

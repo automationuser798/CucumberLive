@@ -5,22 +5,18 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-
 import PageObjects.LoginPage;
 import PageObjects.MyAccountsPage;
-import Configurations.Config;
-//import MyStore.config.baseclass;
 import Configurations.Utility;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+
 
 public class MyAccounts {
 
@@ -29,7 +25,7 @@ public class MyAccounts {
 	final static Logger logger = Logger.getLogger(MyAccounts.class); 
 	int counter = 1;
 	MyAccountsPage myaccountpageobj=null;
-
+	
 
 
 	@And ("^an existing user enters an email address as \"([^\"]*)\"$") 
@@ -37,7 +33,7 @@ public class MyAccounts {
 
 		try {
 
-
+			Utility.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			myaccountpageobj=new MyAccountsPage(Utility.driver);
 			myaccountpageobj.EnterExEmail(emailAddress);
 

@@ -1,8 +1,8 @@
 #Author: Amit Patil
 #Keywords Summary :
 #Feature: List of scenarios for Shopping Cart feature.
-#Date Created: 18/4/2019
-@ShoppingCart
+#Date Created: 
+ShoppingCart
 Feature: Shopping Cart
 
   Background: user is successfully logged in
