@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="28.943793">
-<testcase classname="Login Feature" name="Register a user with Valid email address" time="28.943793">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="86.259075">
+<testcase classname="Login Feature" name="Register a user with Valid email address" time="86.259075">
 <system-out><![CDATA[Given user opens the "chrome" browser.......................................passed
 Given user enters the url "http://automationpractice.com/index.php".........passed
 Given user is on the application login page.................................passed
 And user clicks on Sign in link.............................................passed
-And user enters an email address as "TestYRjT@gmail.com"....................passed
+And user enters an email address as "TestKSamy@gmail.com"...................passed
 And user clicks on Create an account button.................................passed
 And user selects title as Mr................................................passed
 And user enters Customer FirstName as "Amit"................................passed

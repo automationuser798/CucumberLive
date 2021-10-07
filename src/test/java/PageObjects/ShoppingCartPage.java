@@ -2,9 +2,13 @@ package PageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+
+import Configurations.Utility;
+
 
 public class ShoppingCartPage {
 	
@@ -44,6 +48,66 @@ public class ShoppingCartPage {
 	
 	@FindBy(how = How.XPATH, using = "//i[@class='icon-trash']")
 	public WebElement DeleteItemButton;
+	
+	
+	                    /* Page Actions*/
+	
+	
+	
+	
+	
+	public void ClickPrintedSummerDress() {
+		
+		Actions action = new Actions(Utility.driver);
+		action.moveToElement(ItemSelection).build().perform();
+	}
+	
+	
+	public void ClickAddToCart() 
+	{
+		AddToCartButton.click();
+	}
+	
+	
+	public void ClickCancel() 
+	{
+		CancelOnPopup.click();
+	}
+	
+	
+	public void HoverMiniCart() {
+		
+		Actions action = new Actions(Utility.driver);
+		action.moveToElement(MiniShoppingCart).build().perform();
+	}
+	
+	
+	public void RemoveItem() 
+	{
+		MiniShoppingCartRemove.click();
+	}
+	
+	
+	
+	public void ClickMiniCart() 
+	{
+		ItemSelection.click();
+	}
+	
+	
+	
+	public void ClickProceedToCheckout() 
+	{
+		ProceedToCheckout.click();
+	}
+	
+	
+	public void ClickTrash() 
+	{
+		DeleteItemButton.click();
+	}
+	
+	
 	
 	
 }

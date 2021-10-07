@@ -1,10 +1,13 @@
 package PageObjects;
 
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+
+
 
 public class ItemsPage {
 	
@@ -27,6 +30,23 @@ public class ItemsPage {
 		
 		@FindBy(how = How.XPATH, using = "//input[@id='search_query_top']")
 		public WebElement PrintedChiffonDressonDetailsPage;
+		
+		
+		                /*Page Actions*/
+		
+		
+		
+		public void SearchItem(String ItemText) 
+		
+		{
+			this.ItemSearch.sendKeys(ItemText);
+		}
+		
+		
+		public void ClickPrintedChiffonDress() 
+		{
+			PrintedChiffonDress.click();
+		}
 		
 		
 		

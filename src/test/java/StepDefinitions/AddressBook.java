@@ -3,6 +3,7 @@ package StepDefinitions;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -25,7 +26,7 @@ public class AddressBook {
 	
 	LoginPage loginpageobj = null;
 	public static WebDriver driver = null;
-	/* final static Logger logger = Logger.getLogger(AddressBook.class); */
+	final static Logger logger = Logger.getLogger(AddressBook.class);
 	int counter = 1;
 	AddressBookPage addressbookobj = null;
 	
@@ -34,7 +35,7 @@ public class AddressBook {
 	@And("^user clicks on View My Customer Account link$")
 	public void clickOnMyCustomerAccountLink() throws IOException {
 		try {
-			Thread.sleep(1000);
+			
 			addressbookobj = new AddressBookPage(Utility.driver);
 			addressbookobj.MyCustomerAccountLink.click();
 
@@ -50,9 +51,8 @@ public class AddressBook {
 	@And("^user clicks on My Addresses menu$")
 	public void clickOnMyAddressMenu() throws IOException {
 		try {
-			Thread.sleep(1000);
+			
 			addressbookobj = new AddressBookPage(Utility.driver);
-			Thread.sleep(5000);
 			addressbookobj.MyAddressesMenu.click();
 
 			
@@ -67,14 +67,12 @@ public class AddressBook {
 	@And ("^user clicks on Add a new Addresses button$")
 	public void clickOnAddNewAddressButton() throws IOException {
 		try {
-			Thread.sleep(1000);
-			addressbookobj = new AddressBookPage(Utility.driver);
 			
+			addressbookobj = new AddressBookPage(Utility.driver);
 			addressbookobj.AddNewAddressesButton.click();
 			
 		 
-			Thread.sleep(8000);
-
+			
 		}
 		catch(Exception ex) {
 			
@@ -87,7 +85,7 @@ public class AddressBook {
 	@And ("^And user enters Address as \"(.*)\"$")
 	public void EnterFirstAddress(String address) throws IOException {
 		try {
-			Thread.sleep(1000);
+			
 			addressbookobj=new AddressBookPage(Utility.driver);
 			addressbookobj.FirstAddress.sendKeys(address);
 
@@ -104,7 +102,7 @@ public class AddressBook {
 	@And ("^And user enters City as \"(.*)\"$")
 	public void EnterCity(String city) throws IOException {
 		try {
-			Thread.sleep(1000);
+			
 			addressbookobj=new AddressBookPage(Utility.driver);
 			addressbookobj.City.sendKeys(city);
 
@@ -121,7 +119,7 @@ public class AddressBook {
 	@And ("^And user selects State as \"(.*)\"$")
 	public void EnterState(String state) throws IOException {
 		try {
-			Thread.sleep(1000);
+			
 			addressbookobj=new AddressBookPage(Utility.driver);
 			addressbookobj.State.sendKeys(state);
 
@@ -138,7 +136,7 @@ public class AddressBook {
 	@And ("^And user enters ZipCode as \"(.*)\"$")
 	public void EnterZipCode(String zipcode) throws IOException {
 		try {
-			Thread.sleep(1000);
+			
 			addressbookobj=new AddressBookPage(Utility.driver);
 			addressbookobj.ZipCode.sendKeys(zipcode);
 
@@ -155,7 +153,7 @@ public class AddressBook {
 	@And ("^user enters Homephone as \"(.*)\"$")
 	public void EnterHomephone(String Homephone) throws IOException {
 		try {
-			Thread.sleep(1000);
+			
 			addressbookobj=new AddressBookPage(Utility.driver);
 			addressbookobj.HomePhone.sendKeys(Homephone);
 
@@ -171,7 +169,7 @@ public class AddressBook {
 	@And ("^user enters Mobilephone as \"(.*)\"$")
 	public void EnterMobilePhone(String MobilePhone) throws IOException {
 		try {
-			Thread.sleep(1000);
+			
 			addressbookobj=new AddressBookPage(Utility.driver);
 			addressbookobj.MobilePhone.sendKeys(MobilePhone);
 
@@ -185,7 +183,7 @@ public class AddressBook {
 	@And ("^user clicks on the Save button$")
 	public void clickOnSaveAddress() throws IOException {
 		try {
-			Thread.sleep(1000);
+			
 			addressbookobj.AddressSave.click();
 
 			
@@ -201,7 +199,7 @@ public class AddressBook {
 	@Then("^user navigates to the My Addresses page and \"(.*)\" text is displayed to the user$")
 	public void MyAddressPageNavigation(String Extectedtext) throws IOException {
 		try {
-			Thread.sleep(1000);
+			
 			addressbookobj=new AddressBookPage(Utility.driver);
 			//GeckoConfiguration.wait.until(ExpectedConditions.textToBePresentInElement(By.xpath(addressbookobj.MyAddressesText), "MY ADDRESSES"));
 			String ActualText = addressbookobj.MyAddressesText.getText();

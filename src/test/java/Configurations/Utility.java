@@ -15,7 +15,7 @@ public class Utility {
 		if(DriverType.equalsIgnoreCase("chrome"))
 			
 		{
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Amit\\CucumberLive\\CucumberLiveProject\\src\\test\\resources\\Drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "D:\\CucumberLive\\src\\test\\resources\\Drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 			}
 		

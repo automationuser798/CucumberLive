@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import java.io.IOException;
 
+import org.apache.log4j.Logger;
 /*import org.apache.log4j.Logger;*/
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
@@ -22,7 +23,7 @@ public class ShoppingCart {
 
 	LoginPage loginpageobj = null;
 	public static WebDriver driver = null;
-	/* final static Logger logger = Logger.getLogger(ShoppingCart.class); */
+	final static Logger logger = Logger.getLogger(ShoppingCart.class);
 	int counter = 1;
 	MyAccountsPage myaccountpageobj = null;
 	ShoppingCartPage shoppingcartpageobj = null;
@@ -30,10 +31,8 @@ public class ShoppingCart {
 	@And("^user clicks on the Printed Summer Dress Item$")
 	public void clickOnSummerDressItem() throws IOException {
 		try {
-			Thread.sleep(1000);
-			Actions action = new Actions(Utility.driver);
-			action.moveToElement(shoppingcartpageobj.ItemSelection).build().perform();
-			Thread.sleep(1000);
+
+			shoppingcartpageobj.ClickPrintedSummerDress();
 
 		} catch (Exception ex) {
 
@@ -45,9 +44,8 @@ public class ShoppingCart {
 	@And("^user clicks on the Add to Cart button$")
 	public void clickOnAddToCart() throws IOException {
 		try {
-			Thread.sleep(1000);
-			shoppingcartpageobj.AddToCartButton.click();
-			String message = "Step:" + (counter++) + "PASSED- user clicks on Add to Cart buttom";
+
+			shoppingcartpageobj.ClickAddToCart();
 
 		} catch (Exception ex) {
 
@@ -59,15 +57,14 @@ public class ShoppingCart {
 	public void VerifyItemAddPopup(String ExpectedPopupMessage) throws IOException {
 
 		try {
-			Thread.sleep(1000);
+
 			String ActualPopupMessage = Utility.driver.switchTo().alert().getText();
 			System.out.println(ActualPopupMessage);
-			Thread.sleep(1000);
+
 			Assert.assertEquals(ExpectedPopupMessage, ActualPopupMessage);
 
 		} catch (Exception ex) {
-			String message = "Step:" + (counter++) + " FAILED- user failed to see the popup\nException Details:"
-					+ ex.getLocalizedMessage();
+
 			Assert.assertTrue(false);
 		}
 	}
@@ -76,16 +73,10 @@ public class ShoppingCart {
 	public void ClickCancelOnPopup() throws IOException {
 
 		try {
-			Thread.sleep(1000);
-			shoppingcartpageobj.CancelOnPopup.click();
-			String message = "Step:" + (counter++) + "PASSED- user click on the cancel button on the popup";
 
-			Thread.sleep(1000);
+			shoppingcartpageobj.ClickCancel();
 
 		} catch (Exception ex) {
-			String message = "Step:" + (counter++)
-					+ " FAILED- user failed to click on the cancel button on the popup\nException Details:"
-					+ ex.getLocalizedMessage();
 
 			Assert.assertTrue(false);
 		}
@@ -95,17 +86,10 @@ public class ShoppingCart {
 	public void HoverOnMiniShoppingCart() throws IOException {
 
 		try {
-			Thread.sleep(1000);
-			Actions action = new Actions(Utility.driver);
-			action.moveToElement(shoppingcartpageobj.MiniShoppingCart).build().perform();
-			String message = "Step:" + (counter++) + "PASSED- user hover on the mini shopping cart menu";
 
-			Thread.sleep(1000);
+			shoppingcartpageobj.HoverMiniCart();
 
 		} catch (Exception ex) {
-			String message = "Step:" + (counter++)
-					+ " FAILED- user failed to hover on the mini shopping cart menu\nException Details:"
-					+ ex.getLocalizedMessage();
 
 			Assert.assertTrue(false);
 		}
@@ -115,15 +99,10 @@ public class ShoppingCart {
 	public void RemoveItemFromMiniCart() throws IOException {
 
 		try {
-			Thread.sleep(1000);
-			shoppingcartpageobj.MiniShoppingCartRemove.click();
 
-			Thread.sleep(1000);
+			shoppingcartpageobj.RemoveItem();
 
 		} catch (Exception ex) {
-			String message = "Step:" + (counter++)
-					+ " FAILED- user failed to remove the Item from the cart\nException Details:"
-					+ ex.getLocalizedMessage();
 
 			Assert.assertTrue(false);
 		}
@@ -133,10 +112,8 @@ public class ShoppingCart {
 	public void ClickOnMiniCart() throws IOException {
 
 		try {
-			Thread.sleep(1000);
-			shoppingcartpageobj.ItemSelection.click();
 
-			Thread.sleep(1000);
+			shoppingcartpageobj.ClickMiniCart();
 
 		} catch (Exception ex) {
 
@@ -144,41 +121,15 @@ public class ShoppingCart {
 		}
 	}
 
-	/*
-	 * @Then( "\"(.*)\" message is displayed to the user$") public void
-	 * VerifyShoppingCartEmptyMessaget(String ExpectedMessage) throws IOException {
-	 * 
-	 * try { Thread.sleep(1000); String ActualMessage =
-	 * shoppingcartpageobj.ShoppingCartEmptyMessage.getText(); String message =
-	 * "Step:"+(counter++)+"PASSED- ShoppingCart empty message displayd to the user"
-	 * ; System.out.println(ActualMessage); logger.info(message);
-	 * Thread.sleep(1000); Assert.assertEquals(ExpectedMessage, ActualMessage);
-	 * HTMLReportGenerator.StepDetails("PASS", "ClickOnMiniCart",
-	 * message,TakeScreenShot.TakeScreenShot(Config.getImageFilePath(),
-	 * GeckoConfiguration.driver)); } catch(Exception ex) { String message = "Step:"
-	 * + (counter++)+
-	 * " FAILED- user failed to click on the mini Shopping Cart menu\nException Details:"
-	 * + ex.getLocalizedMessage(); logger.info(message);
-	 * HTMLReportGenerator.StepDetails("FAIL", "ClickOnMiniCart",
-	 * message,TakeScreenShot.TakeScreenShot(Config.getImageFilePath(),
-	 * GeckoConfiguration.driver)); Assert.assertTrue(false); } }
-	 */
-
 	@And("^user clicks on the Proceed to Checkout button$")
 	public void ClickOnProceedToCheckout() throws IOException {
 
 		try {
-			Thread.sleep(1000);
-			shoppingcartpageobj.ProceedToCheckout.click();
-			String message = "Step:" + (counter++) + "PASSED- user clicks on the Proceed to Checkout button";
 
-			Thread.sleep(1000);
+			shoppingcartpageobj.ClickProceedToCheckout();
 
 		} catch (Exception ex) {
-			String message = "Step:" + (counter++)
-					+ " FAILED- user failed to click on the Proceed to Checkout button\nException Details:"
-					+ ex.getLocalizedMessage();
-			Assert.assertTrue(false);
+
 		}
 	}
 
@@ -186,9 +137,8 @@ public class ShoppingCart {
 	public void ClickOnTrashButton() throws IOException {
 
 		try {
-			Thread.sleep(1000);
-			shoppingcartpageobj.DeleteItemButton.click();
-			Thread.sleep(1000);
+
+			shoppingcartpageobj.ClickTrash();
 
 		} catch (Exception ex) {
 
@@ -200,10 +150,9 @@ public class ShoppingCart {
 	public void VerifyShoppingCartEmptyMessageMainCart1(String ExpectedMessage) throws IOException {
 
 		try {
-			Thread.sleep(1000);
+
 			String ActualMessage = shoppingcartpageobj.ShoppingCartEmptyMessage.getText();
 			System.out.println(ActualMessage);
-			Thread.sleep(1000);
 			Assert.assertEquals(ExpectedMessage, ActualMessage);
 
 		} catch (Exception ex) {

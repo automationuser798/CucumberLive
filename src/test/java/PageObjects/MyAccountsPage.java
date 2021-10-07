@@ -1,11 +1,14 @@
 package PageObjects;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import Configurations.Utility;
 import StepDefinitions.ServiceHooks;
 
 import java.util.List;
@@ -24,7 +27,6 @@ public class MyAccountsPage {
 
 	
 	@FindBy(how = How.XPATH, using = "(//a[contains(@title,'Dresses')])[5]")
-//	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[1]/div[1]/header[1]/div[3]/div[1]/div[1]/div[6]/ul[1]/li[2]/a[1]")
 	public WebElement dresses_Menu;
 	
 	@FindBy(how = How.XPATH, using = "(//div[@id='block_top_menu']//a[@title='Summer Dresses'])[2]")
@@ -53,5 +55,61 @@ public class MyAccountsPage {
 	
 	@FindBy(how = How.XPATH, using = "//a[@title='Log me out']")
 	public WebElement SignOutLink;
+	
+	
+	
+	
+	                      /* Page Actions*/
+	
+	
+	
+	
+	public void EnterExEmail(String emailAddress) 
+	{
+		this.email_Address_Text_Box.sendKeys(emailAddress);
+	}
+	
+
+	public void EnterExPassword(String password) 
+	{
+		this.password_Text_Box.sendKeys(password);
+	}
+	
+	
+	public void ClickSignInBtn() 
+	{
+		signIn_Button.click();
+	}
+	
+	
+	public void ClickDressesManu() {
+		
+		Actions action = new Actions(Utility.driver);
+		action.moveToElement(dresses_Menu).build().perform();
+	}
+	
+	
+	
+    public void ClickSummerDressesManu() 
+    {
+		this.summer_Dresses_Menu.click();
+		
+	}
+    
+    
+	
+    public void SelectSortBy(String sortBy) 
+	{
+		this.productSortDropDown.sendKeys(sortBy);
+	}
+	
+	
+    public void TabKeys() 
+  	{
+  		this.productSortDropDown.sendKeys(Keys.TAB);
+  	}
+	
+	
+	
 
 }
