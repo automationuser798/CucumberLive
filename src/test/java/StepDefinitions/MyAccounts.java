@@ -44,7 +44,6 @@ public class MyAccounts {
 
 	}
 
-
 	@And ("^an existing user enters an password \"([^\"]*)\"$") 
 	public void  existingUserPassword(String password) throws IOException { 
 
@@ -60,8 +59,6 @@ public class MyAccounts {
 		}
 	}
 
-
-
 	@And ("^user clicks on SignIn button$") 
 
 	public void clickOnSignInButton()  throws IOException {
@@ -75,7 +72,6 @@ public class MyAccounts {
 		} catch(Exception ex) {
 
 			Assert.assertTrue(false); } }
-
 
 	@And ("^user clicks on Dresses mega menu$")
 	public void clickOnDressesMegaMenu() throws IOException {
@@ -106,7 +102,6 @@ public class MyAccounts {
 			Assert.assertTrue(false);
 		}
 	}
-
 
 	@Then("^Summer Dresses page opens with text as \"([^\"]*)\"$")
 	public void verifySummerDressesPageOpens(String summerDressesExpectedPageText) throws IOException {

@@ -17,7 +17,6 @@ public class ShoppingCart {
 	LoginPage loginpageobj = null;
 	public static WebDriver driver = null;
 	final static Logger logger = Logger.getLogger(ShoppingCart.class);
-	int counter = 1;
 	MyAccountsPage myaccountpageobj = null;
 	ShoppingCartPage shoppingcartpageobj = null;
 	

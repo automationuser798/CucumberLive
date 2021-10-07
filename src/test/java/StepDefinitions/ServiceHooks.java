@@ -1,26 +1,20 @@
 package StepDefinitions;
 
-import java.io.IOException;
-import java.net.UnknownHostException;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriverException;
-
 import Configurations.Utility;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import org.apache.log4j.Logger;
 
 
 public class ServiceHooks {
 	
 	 
 	
-	  @After(order = 0)
-	  public void QuitBrowser()  {
+	@After(order = 0)
+	public void QuitBrowser()  {
 		  
 	   Utility.driver.quit(); 
 	   

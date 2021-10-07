@@ -2,16 +2,16 @@
 #Keywords Summary :
 #Feature: List of scenarios for Address Book feature.
 #Date Created: 
-AddressBook
+@AddressBook
 Feature: Address Book feature
 
-    Background: user is successfully logged in
+   Background: user is successfully logged in
     Given user opens the "chrome" browser
     Given user enters the url "http://automationpractice.com/index.php"
 
 
-    @Sanity
-    Scenario: Verify if user can create a new address
+ @Sanity
+  Scenario: Verify if user can create a new address
     Given user is on the application login page
     And user clicks on Sign in link
     And an existing user enters an email address as "testuser04@gmail.com"

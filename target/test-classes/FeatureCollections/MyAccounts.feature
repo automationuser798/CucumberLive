@@ -2,14 +2,14 @@
 #Keywords Summary :
 #Feature: List of scenarios for MyAccounts feature
 #Date Created: 19/8/2018
-MyAccount
+@MyAccount
 Feature: My Account Feature
 
   Background: user is successfully logged in
     Given user opens the "chrome" browser
     Given user enters the url "http://automationpractice.com/index.php"
   
-  @Sanity
+ @Sanity
   Scenario: Verify that the Summer Dresses product list is sorted by price
     Given user is on the application login page
     And user clicks on Sign in link

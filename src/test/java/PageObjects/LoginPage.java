@@ -50,7 +50,6 @@ public class LoginPage {
 	@FindBy(how = How.XPATH, using = "//input[@id='passwd']")
 	public WebElement password;
 
-
 	@FindBy(how = How.XPATH, using = "//input[@id='firstname']")
 	public WebElement address_fname;
 
