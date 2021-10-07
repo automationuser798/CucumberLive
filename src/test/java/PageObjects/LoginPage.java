@@ -8,8 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import Configurations.Utility;
-import StepDefinitions.ServiceHooks;
+
 
 public class LoginPage {
 
@@ -21,7 +20,7 @@ public class LoginPage {
 
 	}
 
-	// =======================Your personal information==========================
+
 	
 	
 	@FindBy(how = How.XPATH, using = ".//*[@title='Log in to your customer account']")
@@ -51,7 +50,7 @@ public class LoginPage {
 	@FindBy(how = How.XPATH, using = "//input[@id='passwd']")
 	public WebElement password;
 
-	// ==============Your address===================================================
+
 	@FindBy(how = How.XPATH, using = "//input[@id='firstname']")
 	public WebElement address_fname;
 
@@ -100,7 +99,7 @@ public class LoginPage {
 	@FindBy(how = How.XPATH, using = "//p[@class='submit']//span[1]")
 	public WebElement signin_button;
 
-	/* Login Page Actions */
+
 
 	public void ClickSignInLink() {
 		SignInLink.click();

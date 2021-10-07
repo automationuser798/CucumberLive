@@ -17,7 +17,7 @@ public class ShoppingCartPage {
 	public ShoppingCartPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.localdriverobject=driver;
-		System.out.println("INSIDE ShoppingCart CONSTRUCTOR");
+
 		
 	}
 	
@@ -49,8 +49,6 @@ public class ShoppingCartPage {
 	@FindBy(how = How.XPATH, using = "//i[@class='icon-trash']")
 	public WebElement DeleteItemButton;
 	
-	
-	                    /* Page Actions*/
 	
 	
 	
@@ -87,15 +85,13 @@ public class ShoppingCartPage {
 		MiniShoppingCartRemove.click();
 	}
 	
-	
-	
+		
 	public void ClickMiniCart() 
 	{
 		ItemSelection.click();
 	}
 	
-	
-	
+		
 	public void ClickProceedToCheckout() 
 	{
 		ProceedToCheckout.click();

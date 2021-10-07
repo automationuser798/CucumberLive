@@ -7,9 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-
 import Configurations.Utility;
-import StepDefinitions.ServiceHooks;
+
 
 import java.util.List;
 
@@ -21,7 +20,7 @@ public class MyAccountsPage {
 	public MyAccountsPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.localdriverobject=driver;
-		System.out.println("INSIDE MyAccountsPage CONSTRUCTOR");
+
 		
 	}
 
@@ -59,10 +58,6 @@ public class MyAccountsPage {
 	
 	
 	
-	                      /* Page Actions*/
-	
-	
-	
 	
 	public void EnterExEmail(String emailAddress) 
 	{
@@ -88,16 +83,14 @@ public class MyAccountsPage {
 		action.moveToElement(dresses_Menu).build().perform();
 	}
 	
-	
-	
+		
     public void ClickSummerDressesManu() 
     {
 		this.summer_Dresses_Menu.click();
 		
 	}
     
-    
-	
+    	
     public void SelectSortBy(String sortBy) 
 	{
 		this.productSortDropDown.sendKeys(sortBy);
@@ -109,7 +102,6 @@ public class MyAccountsPage {
   		this.productSortDropDown.sendKeys(Keys.TAB);
   	}
 	
-	
-	
+		
 
 }

@@ -20,6 +20,8 @@ public class ShoppingCart {
 	int counter = 1;
 	MyAccountsPage myaccountpageobj = null;
 	ShoppingCartPage shoppingcartpageobj = null;
+	
+	
 
 	@And("^user clicks on the Printed Summer Dress Item$")
 	public void clickOnSummerDressItem() throws IOException {

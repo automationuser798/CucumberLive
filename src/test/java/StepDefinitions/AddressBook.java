@@ -11,15 +11,14 @@ import Configurations.Utility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-
 public class AddressBook {
 
 	LoginPage loginpageobj = null;
 	public static WebDriver driver = null;
 	final static Logger logger = Logger.getLogger(AddressBook.class);
 	AddressBookPage addressbookobj = null;
-
-
+	
+	
 
 	@And("^user clicks on View My Customer Account link$")
 	public void clickOnMyCustomerAccountLink() throws IOException {
@@ -29,178 +28,132 @@ public class AddressBook {
 			addressbookobj = new AddressBookPage(Utility.driver);
 			addressbookobj.ClickCustomerAccLink();
 
-
-
 		} catch (Exception ex) {
 
 			Assert.assertTrue(false);
 		}
 	}
-
 
 	@And("^user clicks on My Addresses menu$")
 	public void clickOnMyAddressMenu() throws IOException {
 		try {
 
-			
 			addressbookobj.ClickMyAddressMneu();
-
 
 		} catch (Exception ex) {
 
-
 			Assert.assertTrue(false);
 		}
 	}
 
-
-	@And ("^user clicks on Add a new Addresses button$")
+	@And("^user clicks on Add a new Addresses button$")
 	public void clickOnAddNewAddressButton() throws IOException {
 		try {
 
-			
 			addressbookobj.ClickAddNewAddBtn();
 
-
-
-		}
-		catch(Exception ex) {
+		} catch (Exception ex) {
 
 			Assert.assertTrue(false);
 		}
 	}
 
-
-
-	@And ("^And user enters Address as \"(.*)\"$")
+	@And("^And user enters Address as \"(.*)\"$")
 	public void EnterFirstAddress(String address) throws IOException {
 		try {
 
-			addressbookobj=new AddressBookPage(Utility.driver);
 			addressbookobj.EnterFAddress(address);
 
-
-		}
-		catch(Exception ex) {
-
+		} catch (Exception ex) {
 
 			Assert.assertTrue(false);
 		}
 	}
 
-
-	@And ("^And user enters City as \"(.*)\"$")
+	@And("^And user enters City as \"(.*)\"$")
 	public void EnterCity(String city) throws IOException {
 		try {
 
 			addressbookobj.SelectCityName(city);
 
-
-		}
-		catch(Exception ex) {
-
+		} catch (Exception ex) {
 
 			Assert.assertTrue(false);
 		}
 	}
 
-
-	@And ("^And user selects State as \"(.*)\"$")
+	@And("^And user selects State as \"(.*)\"$")
 	public void EnterState(String state) throws IOException {
 		try {
 
-
 			addressbookobj.SelectStateName(state);
 
-
-		}
-		catch(Exception ex) {
-
+		} catch (Exception ex) {
 
 			Assert.assertTrue(false);
 		}
 	}
 
-
-	@And ("^And user enters ZipCode as \"(.*)\"$")
+	@And("^And user enters ZipCode as \"(.*)\"$")
 	public void EnterZipCode(String zipcode) throws IOException {
 		try {
 
-
 			addressbookobj.EnterZipCode(zipcode);
 
-
-		}
-		catch(Exception ex) {
-
+		} catch (Exception ex) {
 
 			Assert.assertTrue(false);
 		}
 	}
 
-
-	@And ("^user enters Homephone as \"(.*)\"$")
+	@And("^user enters Homephone as \"(.*)\"$")
 	public void EnterHomephone(String Homephone) throws IOException {
 		try {
 
-
 			addressbookobj.EnterHomePhone(Homephone);
 
-
-		}
-		catch(Exception ex) {
-
+		} catch (Exception ex) {
 
 			Assert.assertTrue(false);
 		}
 	}
 
-	@And ("^user enters Mobilephone as \"(.*)\"$")
+	@And("^user enters Mobilephone as \"(.*)\"$")
 	public void EnterMobilePhone(String MobilePhone) throws IOException {
 		try {
 
-
 			addressbookobj.EnterMobilePhone(MobilePhone);
-		}
-		catch(Exception ex) {
+		} catch (Exception ex) {
 
 			Assert.assertTrue(false);
 		}
 	}
 
-	@And ("^user clicks on the Save button$")
+	@And("^user clicks on the Save button$")
 	public void clickOnSaveAddress() throws IOException {
 		try {
 
 			addressbookobj.ClickSaveAddBtn();
 
-
-		}
-		catch(Exception ex) {
-			
+		} catch (Exception ex) {
 
 			Assert.assertTrue(false);
 		}
 	}
-
 
 	@Then("^user navigates to the My Addresses page and \"(.*)\" text is displayed to the user$")
 	public void MyAddressPageNavigation(String Extectedtext) throws IOException {
 		try {
 
-			addressbookobj=new AddressBookPage(Utility.driver);
+		
 			String ActualText = addressbookobj.MyAddressesText.getText();
 
 			Assert.assertEquals(Extectedtext, ActualText);
 
-		}
-		catch(Exception ex) {
-			
-
+		} catch (Exception ex) {
 
 			Assert.assertTrue(false);
 		}
 	}
-
 
 }
