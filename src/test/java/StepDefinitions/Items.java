@@ -21,7 +21,6 @@ public class Items {
 	LoginPage loginpageobj = null;
 	public static WebDriver driver = null;
 	final static Logger logger = Logger.getLogger(Items.class);
-	int counter = 1;
 	MyAccountsPage myaccountpageobj=null;
 	ShoppingCartPage shoppingcartpageobj = null;
 	ItemsPage itemspageobj = null;

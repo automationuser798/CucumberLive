@@ -2,7 +2,7 @@
 #Keywords Summary :
 #Feature: List of scenarios for Items feature.
 #Date Created: 
-@Items
+#Items
 Feature: Items
 
   Background: user is successfully logged in
@@ -13,9 +13,9 @@ Feature: Items
   Scenario: Verify if user can search Item using searchbox & select
     Given user is on the application login page
     And user clicks on Sign in link
-    And an existing user enters an email address as "testuser04@gmail.com"
+    And an existing user enters an email address as "testuser789@gmail.com"
     And an existing user enters an password as "windows@123"
-    And user clicks on SignIn button
+    And existing user clicks on SignIn button
     And user clicks on Dresses mega menu
     And user clicks on Summer Dresses mega menu
     And Summer Dresses page opens with text as "SUMMER DRESSES "

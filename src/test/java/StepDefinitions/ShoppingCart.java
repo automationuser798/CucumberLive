@@ -23,7 +23,7 @@ public class ShoppingCart {
 	
 
 	@And("^user clicks on the Printed Summer Dress Item$")
-	public void clickOnSummerDressItem() throws IOException {
+	public void ClickOnSummerDressItem() throws IOException {
 		try {
 
 			shoppingcartpageobj.ClickPrintedSummerDress();
@@ -36,7 +36,7 @@ public class ShoppingCart {
 	}
 
 	@And("^user clicks on the Add to Cart button$")
-	public void clickOnAddToCart() throws IOException {
+	public void ClickOnAddToCart() throws IOException {
 		try {
 
 			shoppingcartpageobj.ClickAddToCart();

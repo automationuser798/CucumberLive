@@ -28,57 +28,14 @@ public class MyAccounts {
 	
 
 
-	@And ("^an existing user enters an email address as \"([^\"]*)\"$") 
-	public void existingUserEmailAddress(String emailAddress) throws IOException{
-
-		try {
-
-			Utility.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			myaccountpageobj=new MyAccountsPage(Utility.driver);
-			myaccountpageobj.EnterExEmail(emailAddress);
-
-
-		} catch(Exception ex) {
-
-		}
-
-	}
-
-	@And ("^an existing user enters an password \"([^\"]*)\"$") 
-	public void  existingUserPassword(String password) throws IOException { 
-
-		try {
-
-			myaccountpageobj=new  MyAccountsPage(Utility.driver);
-			myaccountpageobj.EnterExPassword(password);
-
-
-		} catch(Exception ex) {
-
-			Assert.assertTrue(false); 
-		}
-	}
-
-	@And ("^user clicks on SignIn button$") 
-
-	public void clickOnSignInButton()  throws IOException {
-
-		try 
-
-		{ 
-			myaccountpageobj=new MyAccountsPage(Utility.driver);
-			myaccountpageobj.ClickSignInBtn();
-
-		} catch(Exception ex) {
-
-			Assert.assertTrue(false); } }
-
+	
 	@And ("^user clicks on Dresses mega menu$")
-	public void clickOnDressesMegaMenu() throws IOException {
+	public void ClickOnDressesMegaMenu() throws IOException {
 
 		try {
-
-
+			
+			MyAccountsPage myaccountpageobj = new MyAccountsPage(Utility.driver);
+			Thread.sleep(8000);
 			myaccountpageobj.ClickDressesManu();
 
 		}
@@ -90,10 +47,10 @@ public class MyAccounts {
 	}
 
 	@And ("^user clicks on Summer Dresses mega menu$")
-	public void clickOnSummerDressesMegaMenu() throws IOException {
+	public void ClickOnSummerDressesMegaMenu() throws IOException {
 		try {
 
-
+			Thread.sleep(5000);
 			myaccountpageobj.ClickSummerDressesManu();
 
 		}
@@ -104,7 +61,7 @@ public class MyAccounts {
 	}
 
 	@Then("^Summer Dresses page opens with text as \"([^\"]*)\"$")
-	public void verifySummerDressesPageOpens(String summerDressesExpectedPageText) throws IOException {
+	public void VerifySummerDressesPageOpens(String summerDressesExpectedPageText) throws IOException {
 		try {
 
 			String summerDressesActualPageText = myaccountpageobj.summer_Dresses_Landing_Page.getText();
@@ -120,7 +77,7 @@ public class MyAccounts {
 	}
 
 	@And("^user selects Sort by drop down value \"([^\"]*)\"$")
-	public void selectSortByValue(String sortBy) throws Exception {
+	public void SelectSortByValue(String sortBy) throws Exception {
 		try {
 
 			myaccountpageobj.SelectSortBy(sortBy);
@@ -139,7 +96,7 @@ public class MyAccounts {
 	}
 
 	@Then("^user verifies that the products are sorted based on the selected Sort by value$")
-	public void verifyProductSortBasedOnSelectedSortByValue() throws Exception {
+	public void VerifyProductSortBasedOnSelectedSortByValue() throws Exception {
 		try {
 
 

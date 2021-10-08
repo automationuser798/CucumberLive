@@ -21,6 +21,8 @@ public class Login {
 	final static Logger logger = Logger.getLogger(Login.class);
 	MyAccountsPage myaccountpageobj = null;
 	public static WebDriver driver = null;
+	
+	
 
 	@Given("^user opens the \"(.*)\" browser$")
 	public void OpenBrowser(String BrowserName) {
@@ -65,7 +67,7 @@ public class Login {
 	}
 
 	@Given("^user clicks on Create an account button$")
-	public void clickOnCreateAnAccountButton() throws Exception {
+	public void ClickOnCreateAnAccountButton() throws Exception {
 		try {
 
 			loginpageobj.ClickCreateAccountBtn();
@@ -166,7 +168,7 @@ public class Login {
 	}
 
 	@And("^user enters City as \"(.*)\"$")
-	public void Enter_City(String City) throws IOException {
+	public void EnterCity(String City) throws IOException {
 		try {
 
 			loginpageobj.EnterCity(City);
@@ -191,7 +193,7 @@ public class Login {
 	}
 
 	@And("^user enters ZipCode as \"(.*)\"$")
-	public void Enter_ZipCode(String ZipCode) throws IOException {
+	public void EnterZipCode(String ZipCode) throws IOException {
 		try {
 
 			loginpageobj.EnterZip(ZipCode);
@@ -216,7 +218,7 @@ public class Login {
 	}
 
 	@And("^user enters Mobile as \"(.*)\"$")
-	public void Enter_Mobile(String Mobile) throws IOException {
+	public void EnterMobile(String Mobile) throws IOException {
 		try {
 
 			loginpageobj.EnterMoble(Mobile);
@@ -229,7 +231,7 @@ public class Login {
 	}
 
 	@And("^user enters AliasAddress as \"(.*)\"$")
-	public void Enter_Alias_Address(String AliasAddress) throws IOException {
+	public void EnterAliasAddress(String AliasAddress) throws IOException {
 		try {
 
 			loginpageobj.AliasAddress(AliasAddress);
@@ -242,7 +244,7 @@ public class Login {
 	}
 
 	@And("^user clicks on Register button$")
-	public void Register_button() throws IOException {
+	public void Registerbutton() throws IOException {
 		try {
 
 			loginpageobj.ClickRegisterBtn();
@@ -268,7 +270,7 @@ public class Login {
 	}
 
 	@Then("^user receives an errormessage saying \"(.*)\"$")
-	public void Invalid_Errror(String errormessage) throws IOException {
+	public void InvalidErrror(String errormessage) throws IOException {
 		try {
 
 			String errormsg = loginpageobj.invalidEmail_error.getText();
@@ -296,4 +298,50 @@ public class Login {
 
 	}
 
+	
+	@And("^an existing user enters an email address as \"(.*)\"$")
+	public void EnterExistingUsername(String email) throws IOException {
+		try {
+
+			loginpageobj.EnterExEmail(email);
+			
+		}
+
+		catch (Exception e) {
+
+			Assert.assertTrue(false);
+		}
+
+	}
+	
+	@And("^an existing user enters an password as \"(.*)\"$")
+	public void EnterExistingPassword(String pwd) throws IOException {
+		try {
+
+			loginpageobj.EnterExPwd(pwd);
+			
+		}
+
+		catch (Exception e) {
+
+			Assert.assertTrue(false);
+		}
+
+	}
+	
+	@And("^existing user clicks on SignIn button$")
+	public void ClickExSignInBtn() throws IOException {
+		try {
+
+			loginpageobj.ClickExSignIn();
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			Assert.assertTrue(false);
+		}
+	}
+	
+	
+	
 }

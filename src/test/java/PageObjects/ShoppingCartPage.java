@@ -50,9 +50,7 @@ public class ShoppingCartPage {
 	public WebElement DeleteItemButton;
 	
 	
-	
-	
-	
+		
 	
 	public void ClickPrintedSummerDress() {
 		
@@ -60,18 +58,15 @@ public class ShoppingCartPage {
 		action.moveToElement(ItemSelection).build().perform();
 	}
 	
-	
 	public void ClickAddToCart() 
 	{
 		AddToCartButton.click();
 	}
 	
-	
 	public void ClickCancel() 
 	{
 		CancelOnPopup.click();
 	}
-	
 	
 	public void HoverMiniCart() {
 		
@@ -79,24 +74,20 @@ public class ShoppingCartPage {
 		action.moveToElement(MiniShoppingCart).build().perform();
 	}
 	
-	
 	public void RemoveItem() 
 	{
 		MiniShoppingCartRemove.click();
 	}
 	
-		
 	public void ClickMiniCart() 
 	{
 		ItemSelection.click();
 	}
 	
-		
 	public void ClickProceedToCheckout() 
 	{
 		ProceedToCheckout.click();
 	}
-	
 	
 	public void ClickTrash() 
 	{

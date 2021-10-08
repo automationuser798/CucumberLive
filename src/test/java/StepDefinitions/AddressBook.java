@@ -21,7 +21,7 @@ public class AddressBook {
 	
 
 	@And("^user clicks on View My Customer Account link$")
-	public void clickOnMyCustomerAccountLink() throws IOException {
+	public void ClickOnMyCustomerAccountLink() throws IOException {
 		try {
 
 			Utility.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -35,7 +35,7 @@ public class AddressBook {
 	}
 
 	@And("^user clicks on My Addresses menu$")
-	public void clickOnMyAddressMenu() throws IOException {
+	public void ClickOnMyAddressMenu() throws IOException {
 		try {
 
 			addressbookobj.ClickMyAddressMneu();
@@ -47,7 +47,7 @@ public class AddressBook {
 	}
 
 	@And("^user clicks on Add a new Addresses button$")
-	public void clickOnAddNewAddressButton() throws IOException {
+	public void ClickOnAddNewAddressButton() throws IOException {
 		try {
 
 			addressbookobj.ClickAddNewAddBtn();
@@ -130,7 +130,7 @@ public class AddressBook {
 	}
 
 	@And("^user clicks on the Save button$")
-	public void clickOnSaveAddress() throws IOException {
+	public void ClickOnSaveAddress() throws IOException {
 		try {
 
 			addressbookobj.ClickSaveAddBtn();

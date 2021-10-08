@@ -2,7 +2,7 @@
 #Keywords Summary :
 #Feature: List of scenarios for MyAccounts feature
 #Date Created: 19/8/2018
-@MyAccount
+#MyAccount
 Feature: My Account Feature
 
   Background: user is successfully logged in

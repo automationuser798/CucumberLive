@@ -2,7 +2,7 @@
 #Keywords Summary :
 #Feature: List of scenarios for Address Book feature.
 #Date Created: 
-@AddressBook
+#AddressBook
 Feature: Address Book feature
 
    Background: user is successfully logged in

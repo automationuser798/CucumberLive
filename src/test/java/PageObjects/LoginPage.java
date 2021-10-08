@@ -98,7 +98,16 @@ public class LoginPage {
 	@FindBy(how = How.XPATH, using = "//p[@class='submit']//span[1]")
 	public WebElement signin_button;
 
-
+	@FindBy(how = How.XPATH, using = "//input[@id='email']")
+	public WebElement Ex_Email;
+	
+	@FindBy(how = How.XPATH, using = "//input[@id='passwd']")
+	public WebElement Ex_Pwd;
+	
+	@FindBy(how = How.XPATH, using = "//span[normalize-space()='Sign in']")
+	public WebElement Ex_SignIn_Btn;
+	
+	
 
 	public void ClickSignInLink() {
 		SignInLink.click();
@@ -174,4 +183,15 @@ public class LoginPage {
 		this.signin_email.sendKeys(emailaddress);
 	}
 
+	public void EnterExEmail(String email) {
+		this.Ex_Email.sendKeys(email);
+	}
+
+	public void EnterExPwd(String pwd) {
+		this.Ex_Pwd.sendKeys(pwd);
+	}
+	
+	public void ClickExSignIn() {
+		Ex_SignIn_Btn.click();
+	}
 }

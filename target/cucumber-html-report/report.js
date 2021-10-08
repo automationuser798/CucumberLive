@@ -2,12 +2,7 @@ $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.
 formatter.feature({
   "name": "Login Feature",
   "description": "",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@Login"
-    }
-  ]
+  "keyword": "Feature"
 });
 formatter.background({
   "name": "user is successfully logged in",
@@ -35,13 +30,10 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Register a user with Valid email address",
+  "name": "Register a user with valid email address",
   "description": "",
   "keyword": "Scenario",
   "tags": [
-    {
-      "name": "@Login"
-    },
     {
       "name": "@SmokeTest"
     }
@@ -68,7 +60,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters an email address as \"Test5Samy@gmail.com\"",
+  "name": "user enters an email address as \"Test1Samy@gmail.com\"",
   "keyword": "And "
 });
 formatter.match({
@@ -82,7 +74,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "Login.clickOnCreateAnAccountButton()"
+  "location": "Login.ClickOnCreateAnAccountButton()"
 });
 formatter.result({
   "status": "passed"
@@ -138,7 +130,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters Address as \"First Lane Narhe\"",
+  "name": "user enters Address as \"First Lane\"",
   "keyword": "And "
 });
 formatter.match({
@@ -152,7 +144,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "Login.Enter_City(String)"
+  "location": "Login.EnterCity(String)"
 });
 formatter.result({
   "status": "passed"
@@ -172,7 +164,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "Login.Enter_ZipCode(String)"
+  "location": "Login.EnterZipCode(String)"
 });
 formatter.result({
   "status": "passed"
@@ -192,7 +184,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "Login.Enter_Mobile(String)"
+  "location": "Login.EnterMobile(String)"
 });
 formatter.result({
   "status": "passed"
@@ -202,7 +194,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "Login.Enter_Alias_Address(String)"
+  "location": "Login.EnterAliasAddress(String)"
 });
 formatter.result({
   "status": "passed"
@@ -212,7 +204,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "Login.Register_button()"
+  "location": "Login.Registerbutton()"
 });
 formatter.result({
   "status": "passed"

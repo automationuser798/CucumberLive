@@ -2,7 +2,7 @@
 #Keywords Summary :
 #Feature: List of scenarios for Login feature
 #Date Created: 
-@Login
+#Login
 Feature: Login Feature
 
   Background: user is successfully logged in
@@ -10,17 +10,17 @@ Feature: Login Feature
     Given user enters the url "http://automationpractice.com/index.php"
 
   @SmokeTest
-  Scenario: Register a user with Valid email address
+  Scenario: Register a user with valid email address
     Given user is on the application login page
     And user clicks on Sign in link
-    And user enters an email address as "Test5Samy@gmail.com"
+    And user enters an email address as "Test1Samy@gmail.com"
     And user clicks on Create an account button
     And user selects title as Mr.
     And user enters Customer FirstName as "Amit"
     And user enters Customer LastName as "Patil"
     And user enters Password as "windows@123"
     And user enters Company as "Yahoo"
-    And user enters Address as "First Lane Narhe"
+    And user enters Address as "First Lane"
     And user enters City as "Romulus"
     And user selects State as "Alabama"
     And user enters ZipCode as "35006"

@@ -2,7 +2,7 @@
 #Keywords Summary :
 #Feature: List of scenarios for Shopping Cart feature.
 #Date Created: 
-@ShoppingCart
+#ShoppingCart
 Feature: Shopping Cart
 
   Background: user is successfully logged in
