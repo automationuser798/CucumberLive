@@ -38,7 +38,8 @@ public class AddressBook {
 	public void ClickOnMyAddressMenu() throws IOException {
 		try {
 
-			addressbookobj.ClickMyAddressMneu();
+			addressbookobj = new AddressBookPage(Utility.driver);
+			addressbookobj.ClickMyAddressMenu();
 
 		} catch (Exception ex) {
 

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="98.963123">
-<testcase classname="Items" name="Verify if user can search Item using searchbox &amp; select" time="98.963123">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="31.88167">
+<testcase classname="Address Book feature" name="Verify if user can create a new address" time="31.88167">
 <system-out><![CDATA[Given user opens the "chrome" browser.......................................passed
 Given user enters the url "http://automationpractice.com/index.php".........passed
 Given user is on the application login page.................................passed
@@ -8,12 +8,17 @@ And an existing user enters an email address as "testuser789@gmail.com".....pass
 And an existing user enters an password as "windows@123"....................passed
 And existing user clicks on SignIn button...................................passed
 Then user lands on the My Account page......................................passed
-And user clicks on Dresses mega menu........................................passed
-And user clicks on Summer Dresses mega menu.................................passed
-And Summer Dresses page opens with text as "SUMMER DRESSES "................passed
-Then user enters "Dress" into the Global Item searchbox.....................passed
-And user selects Printed Chiffon Item from the list.........................passed
-Then "Printed Chiffon Dress" is displayed in Details view...................passed
+And user clicks on My Addresses menu........................................passed
+And user clicks on Add a new Addresses button...............................passed
+And user enters Address as "Street 1".......................................passed
+And user enters City as "Romulus"...........................................passed
+And user selects State as "Alabama".........................................passed
+And user enters ZipCode as "35006"..........................................passed
+And user selects Country as "United States".................................passed
+And user enters Homephone as "545454545"....................................passed
+And user enters Mobilephone as "989898989"..................................passed
+And user clicks on the Save button..........................................passed
+Then user navigates to the My Addresses page and "MY ADDRESSES" text is displayed to the user.passed
 ]]></system-out>
 </testcase>
 </testsuite>

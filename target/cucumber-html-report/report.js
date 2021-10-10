@@ -1,6 +1,6 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/FeatureCollections/Items.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/FeatureCollections/AddressBook.feature");
 formatter.feature({
-  "name": "Items",
+  "name": "Address Book feature",
   "description": "",
   "keyword": "Feature"
 });
@@ -30,7 +30,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Verify if user can search Item using searchbox \u0026 select",
+  "name": "Verify if user can create a new address",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -100,61 +100,111 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on Dresses mega menu",
+  "name": "user clicks on My Addresses menu",
   "keyword": "And "
 });
 formatter.match({
-  "location": "MyAccounts.ClickOnDressesMegaMenu()"
+  "location": "AddressBook.ClickOnMyAddressMenu()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on Summer Dresses mega menu",
+  "name": "user clicks on Add a new Addresses button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "MyAccounts.ClickOnSummerDressesMegaMenu()"
+  "location": "AddressBook.ClickOnAddNewAddressButton()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Summer Dresses page opens with text as \"SUMMER DRESSES \"",
+  "name": "user enters Address as \"Street 1\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "MyAccounts.VerifySummerDressesPageOpens(String)"
+  "location": "Login.EnterAddress(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters \"Dress\" into the Global Item searchbox",
+  "name": "user enters City as \"Romulus\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Login.EnterCity(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects State as \"Alabama\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Login.SelectState(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters ZipCode as \"35006\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Login.EnterZipCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects Country as \"United States\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Login.SelectCountry(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters Homephone as \"545454545\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "AddressBook.EnterHomephone(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters Mobilephone as \"989898989\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "AddressBook.EnterMobilePhone(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on the Save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "AddressBook.ClickOnSaveAddress()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user navigates to the My Addresses page and \"MY ADDRESSES\" text is displayed to the user",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Items.SearchAnItem(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects Printed Chiffon Item from the list",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Items.SelectItem()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "\"Printed Chiffon Dress\" is displayed in Details view",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Items.VerifyPrintedChiffonDress(String)"
+  "location": "AddressBook.MyAddressPageNavigation(String)"
 });
 formatter.result({
   "status": "passed"

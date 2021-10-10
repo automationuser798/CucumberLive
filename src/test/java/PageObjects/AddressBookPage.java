@@ -20,7 +20,7 @@ public class AddressBookPage {
 	@FindBy(how = How.XPATH, using = "//a[@title='View my customer account']")
 	public WebElement MyCustomerAccountLink;
 
-	@FindBy(how = How.XPATH, using = "//span[normalize-space()='My addresses']")
+	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/ul[1]/li[4]/a[1]/span[1]")
 	public WebElement MyAddressesMenu;
 
 	@FindBy(how = How.XPATH, using = "//span[normalize-space()='Add a new address']")
@@ -44,7 +44,7 @@ public class AddressBookPage {
 	@FindBy(how = How.XPATH, using = "//input[@id='phone_mobile']")
 	public WebElement MobilePhone;
 
-	@FindBy(how = How.XPATH, using = "//input[@id='phone_mobile']")
+	@FindBy(how = How.XPATH, using = "//body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/form[1]/p[2]/button[1]/span[1]")
 	public WebElement AddressSave;
 
 	@FindBy(how = How.XPATH, using = "//h1[@class='page-heading']")
@@ -58,7 +58,7 @@ public class AddressBookPage {
 		MyCustomerAccountLink.click();
 	}
 
-	public void ClickMyAddressMneu() 
+	public void ClickMyAddressMenu() 
 	{
 		MyAddressesMenu.click();
 	}
