@@ -1,6 +1,6 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/FeatureCollections/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/FeatureCollections/Items.feature");
 formatter.feature({
-  "name": "Login Feature",
+  "name": "Items",
   "description": "",
   "keyword": "Feature"
 });
@@ -30,7 +30,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Register a user with valid email address",
+  "name": "Verify if user can search Item using searchbox \u0026 select",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -60,161 +60,101 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters an email address as \"Test1Samy@gmail.com\"",
+  "name": "an existing user enters an email address as \"testuser789@gmail.com\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Login.EnterEmail(String)"
+  "location": "Login.EnterExistingUsername(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on Create an account button",
+  "name": "an existing user enters an password as \"windows@123\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Login.ClickOnCreateAnAccountButton()"
+  "location": "Login.EnterExistingPassword(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user selects title as Mr.",
+  "name": "existing user clicks on SignIn button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Login.Title()"
+  "location": "Login.ClickExSignInBtn()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters Customer FirstName as \"Amit\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Login.EnterFirstName(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters Customer LastName as \"Patil\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Login.EnterLastName(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters Password as \"windows@123\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Login.EnterPassword(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters Company as \"Yahoo\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Login.EnterCompany(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters Address as \"First Lane\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Login.EnterAddress(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters City as \"Romulus\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Login.EnterCity(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects State as \"Alabama\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Login.SelectState(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters ZipCode as \"35006\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Login.EnterZipCode(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects Country as \"United States\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Login.SelectCountry(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters Mobile as \"9898989898\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Login.EnterMobile(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters AliasAddress as \"Test Address\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Login.EnterAliasAddress(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on Register button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Login.Registerbutton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user lands on the MyAccount page",
+  "name": "user lands on the My Account page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Login.MyAccount()"
+  "location": "MyAccounts.MyAccountpage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on Dresses mega menu",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MyAccounts.ClickOnDressesMegaMenu()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on Summer Dresses mega menu",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MyAccounts.ClickOnSummerDressesMegaMenu()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Summer Dresses page opens with text as \"SUMMER DRESSES \"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MyAccounts.VerifySummerDressesPageOpens(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters \"Dress\" into the Global Item searchbox",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Items.SearchAnItem(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects Printed Chiffon Item from the list",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Items.SelectItem()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "\"Printed Chiffon Dress\" is displayed in Details view",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Items.VerifyPrintedChiffonDress(String)"
 });
 formatter.result({
   "status": "passed"

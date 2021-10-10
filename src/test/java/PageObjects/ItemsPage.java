@@ -22,13 +22,13 @@ public class ItemsPage {
 	}
 
 
-	@FindBy(how = How.XPATH, using = "//input[@id='search_query_top']")
+	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[1]/div[1]/header[1]/div[3]/div[1]/div[1]/div[2]/form[1]/input[4]")
 	public WebElement ItemSearch;
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\"category\"]/div[2]/ul/li[4]")
+	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[2]/ul[1]/li[4]")
 	public WebElement PrintedChiffonDress;
 
-	@FindBy(how = How.XPATH, using = "//input[@id='search_query_top']")
+	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]/h1[1]")
 	public WebElement PrintedChiffonDressonDetailsPage;
 
 

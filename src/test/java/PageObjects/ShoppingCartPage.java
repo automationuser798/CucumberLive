@@ -72,6 +72,7 @@ public class ShoppingCartPage {
 		
 		Actions action = new Actions(Utility.driver);
 		action.moveToElement(MiniShoppingCart).build().perform();
+	
 	}
 	
 	public void RemoveItem() 

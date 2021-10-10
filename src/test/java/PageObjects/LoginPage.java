@@ -14,7 +14,8 @@ public class LoginPage {
 
 	WebDriver localdriverobject;
 
-	public LoginPage(WebDriver driver) {
+	public LoginPage(WebDriver driver) 
+	{
 		PageFactory.initElements(driver, this);
 		this.localdriverobject = driver;
 
@@ -106,7 +107,10 @@ public class LoginPage {
 	
 	@FindBy(how = How.XPATH, using = "//span[normalize-space()='Sign in']")
 	public WebElement Ex_SignIn_Btn;
-	
+
+	@FindBy(how = How.XPATH, using = "//a[@title='Log me out']")
+	public WebElement Signout_Link;
+
 	
 
 	public void ClickSignInLink() {
@@ -194,4 +198,8 @@ public class LoginPage {
 	public void ClickExSignIn() {
 		Ex_SignIn_Btn.click();
 	}
+
+public void ClickSignOut() {
+	Signout_Link.click();
+}
 }

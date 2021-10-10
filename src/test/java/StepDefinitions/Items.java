@@ -28,16 +28,17 @@ public class Items {
 	
 
 	@Then("^user enters \"(.*)\" into the Global Item searchbox$")
-	public void SearchItem(String ItemText) throws IOException {
+	public void SearchAnItem(String ItemText) throws IOException {
 
 		try {
-
+			ItemsPage itemspageobj = new ItemsPage(Utility.driver);
 			Utility.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			itemspageobj.SearchItem(ItemText);
 
 		}
 		catch(Exception ex) {
 
+			System.out.println(ex);
 			Assert.assertTrue(false);
 		}
 	}
@@ -47,23 +48,28 @@ public class Items {
 	public void SelectItem() throws IOException {
 
 		try {
-
+			
+			Thread.sleep(4000);
+			itemspageobj = new ItemsPage(Utility.driver);
 			itemspageobj.ClickPrintedChiffonDress();
 
 
 		}
 		catch(Exception ex) {
 
-			Assert.assertTrue(false);
+			System.out.println(ex);
+			 Assert.assertTrue(false); 
 		}
 	}
 
 
-	@And("\"(.*)\" is displayed in Details view$")
+	@Then("\"(.*)\" is displayed in Details view$")
 	public void VerifyPrintedChiffonDress(String ItemName) throws IOException {
 
 		try {
-
+			
+			Thread.sleep(8000);
+			itemspageobj = new ItemsPage(Utility.driver);
 			String ActualItemName= itemspageobj.PrintedChiffonDressonDetailsPage.getText();
 
 			Assert.assertEquals(ItemName, ActualItemName);			

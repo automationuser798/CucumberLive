@@ -342,6 +342,34 @@ public class Login {
 		}
 	}
 	
+	@And("^user clicks on the signout link$")
+	public void ClickSignOutButton() throws IOException {
+		try {
+
+			loginpageobj.ClickSignOut();
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			Assert.assertTrue(false);
+		}
+	}
 	
+	@Then("^user lands on the login page$")
+	public void LoginPageLanding () throws IOException {
+
+		try {
+			
+		
+			loginpageobj = new LoginPage(Utility.driver);
+			logger.info("User is on application login page");
+				
+				
+		} catch (Exception ex) {
+
+			System.out.println(ex);
+		}
+	}
+
 	
 }

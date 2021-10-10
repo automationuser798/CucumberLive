@@ -9,13 +9,14 @@ Feature: Items
     Given user opens the "chrome" browser
     Given user enters the url "http://automationpractice.com/index.php"
     
- @Sanity
+ @SmokeTest
   Scenario: Verify if user can search Item using searchbox & select
     Given user is on the application login page
     And user clicks on Sign in link
     And an existing user enters an email address as "testuser789@gmail.com"
     And an existing user enters an password as "windows@123"
     And existing user clicks on SignIn button
+    Then user lands on the My Account page
     And user clicks on Dresses mega menu
     And user clicks on Summer Dresses mega menu
     And Summer Dresses page opens with text as "SUMMER DRESSES "

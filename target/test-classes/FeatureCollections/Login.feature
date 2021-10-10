@@ -9,7 +9,7 @@ Feature: Login Feature
     Given user opens the "chrome" browser
     Given user enters the url "http://automationpractice.com/index.php"
 
-  @SmokeTest
+  @Sanity
   Scenario: Register a user with valid email address
     Given user is on the application login page
     And user clicks on Sign in link
@@ -56,9 +56,12 @@ Feature: Login Feature
     
         
   @Sanity
-  Scenario: Verify that the Summer Dresses mega menu works
+  Scenario: Verify the valid loginlogout scenario for existing user
     Given user is on the application login page
     And user clicks on Sign in link
-    And an existing user enters an email address as "testuser04@gmail.com"
+    And an existing user enters an email address as "testuser789@gmail.com"
     And an existing user enters an password as "windows@123"
-    And user clicks on SignIn button
+    And existing user clicks on SignIn button
+    Then user lands on the My Account page
+    And user clicks on the signout link
+    Then user lands on the login page

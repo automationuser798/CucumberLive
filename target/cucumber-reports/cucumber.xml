@@ -1,25 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="49.721409">
-<testcase classname="Login Feature" name="Register a user with valid email address" time="49.721409">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="98.963123">
+<testcase classname="Items" name="Verify if user can search Item using searchbox &amp; select" time="98.963123">
 <system-out><![CDATA[Given user opens the "chrome" browser.......................................passed
 Given user enters the url "http://automationpractice.com/index.php".........passed
 Given user is on the application login page.................................passed
 And user clicks on Sign in link.............................................passed
-And user enters an email address as "Test1Samy@gmail.com"...................passed
-And user clicks on Create an account button.................................passed
-And user selects title as Mr................................................passed
-And user enters Customer FirstName as "Amit"................................passed
-And user enters Customer LastName as "Patil"................................passed
-And user enters Password as "windows@123"...................................passed
-And user enters Company as "Yahoo"..........................................passed
-And user enters Address as "First Lane".....................................passed
-And user enters City as "Romulus"...........................................passed
-And user selects State as "Alabama".........................................passed
-And user enters ZipCode as "35006"..........................................passed
-And user selects Country as "United States".................................passed
-And user enters Mobile as "9898989898"......................................passed
-And user enters AliasAddress as "Test Address"..............................passed
-And user clicks on Register button..........................................passed
-Then user lands on the MyAccount page.......................................passed
+And an existing user enters an email address as "testuser789@gmail.com".....passed
+And an existing user enters an password as "windows@123"....................passed
+And existing user clicks on SignIn button...................................passed
+Then user lands on the My Account page......................................passed
+And user clicks on Dresses mega menu........................................passed
+And user clicks on Summer Dresses mega menu.................................passed
+And Summer Dresses page opens with text as "SUMMER DRESSES "................passed
+Then user enters "Dress" into the Global Item searchbox.....................passed
+And user selects Printed Chiffon Item from the list.........................passed
+Then "Printed Chiffon Dress" is displayed in Details view...................passed
 ]]></system-out>
 </testcase>
 </testsuite>

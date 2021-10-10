@@ -14,10 +14,10 @@ Feature: Address Book feature
   Scenario: Verify if user can create a new address
     Given user is on the application login page
     And user clicks on Sign in link
-    And an existing user enters an email address as "testuser04@gmail.com"
+    And an existing user enters an email address as "testuser789@gmail.com"
     And an existing user enters an password as "windows@123"
-    And user clicks on SignIn button
-    #And user clicks on View My Customer Account link
+    And existing user clicks on SignIn button
+    Then user lands on the My Account page
     And user clicks on My Addresses menu
     And user clicks on Add a new Addresses button
     And user enters Address as "Street 1"

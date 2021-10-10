@@ -8,8 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import Configurations.Utility;
-
-
 import java.util.List;
 
 
@@ -17,7 +15,8 @@ public class MyAccountsPage {
 	
 	WebDriver localdriverobject;
 
-	public MyAccountsPage(WebDriver driver) {
+	public MyAccountsPage(WebDriver driver) 
+	{
 		PageFactory.initElements(driver, this);
 		this.localdriverobject=driver;
 
@@ -25,10 +24,10 @@ public class MyAccountsPage {
 	}
 
 	
-	@FindBy(how = How.XPATH, using = "(//body/div[@id='page']/div[@class='header-container']/header[@id='header']/div/div[@class='container']/div[@class='row']/div[@id='block_top_menu']/ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']/li[2]/a[1]")
+	@FindBy(how = How.XPATH, using = "//header/div[3]/div[1]/div[1]/div[6]/ul[1]/li[2]/a[1]")
 	public WebElement dresses_Menu;
 	
-	@FindBy(how = How.XPATH, using = "(//div[@id='block_top_menu']//a[@title='Summer Dresses'])[2]")
+	@FindBy(how = How.XPATH, using = "//body/div[@id='page']/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/ul[1]/li[3]/a[1]")
 	public WebElement summer_Dresses_Menu;
 
 	@FindBy(how=How.XPATH, using="//input[@id='email']")
@@ -58,15 +57,20 @@ public class MyAccountsPage {
 	
 	
 	
-	public void ClickDressesManu() {
-		
-		Actions action = new Actions(Utility.driver);
-		action.moveToElement(dresses_Menu).build().perform();
-	}
 	
-    public void ClickSummerDressesManu() 
+    public void ClickDressesMenu() 
     {
-		this.summer_Dresses_Menu.click();
+		  
+		/*
+		 * Actions action = new Actions(Utility.driver);
+		 * action.moveToElement(dresses_Menu).click().perform();
+		 */
+    	dresses_Menu.click();
+	  }
+
+	public void ClickSummerDressesManu() 
+    {
+		summer_Dresses_Menu.click();
 		
 	}
     
