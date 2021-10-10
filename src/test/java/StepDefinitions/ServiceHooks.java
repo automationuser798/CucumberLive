@@ -19,9 +19,7 @@ public class ServiceHooks {
 	   Utility.driver.quit(); 
 	   
 	  }
-	 
-		
-	
+			
 	@After(order = 1)
 	public void EndTest(Scenario scenario) {
 		if (scenario.isFailed()) {

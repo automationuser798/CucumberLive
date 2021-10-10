@@ -43,8 +43,6 @@ public class MyAccounts {
 		}
 	}
 
-	
-
 	@And("^user clicks on Dresses mega menu$")
 	public void ClickOnDressesMegaMenu() throws IOException {
 
@@ -61,10 +59,7 @@ public class MyAccounts {
 			Assert.assertTrue(false);
 		}
 	}
-
-	
-	
-	
+		
 	@And("^user clicks on Summer Dresses mega menu$")
 	public void ClickOnSummerDressesMegaMenu() throws IOException {
 		try {
