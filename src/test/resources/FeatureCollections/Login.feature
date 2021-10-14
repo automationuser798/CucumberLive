@@ -9,7 +9,7 @@ Feature: Login Feature
     Given user opens the "chrome" browser
     Given user enters the url "http://automationpractice.com/index.php"
 
-  @Sanity
+  @SmokeTest
   Scenario: Register a user with valid email address
     Given user is on the application login page
     And user clicks on Sign in link
