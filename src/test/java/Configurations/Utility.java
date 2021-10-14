@@ -17,21 +17,21 @@ public class Utility {
 		if(DriverType.equalsIgnoreCase("chrome"))
 
 		{
-			System.setProperty("webdriver.chrome.driver", "D:\\CucumberLive\\src\\test\\resources\\Drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Amit\\CucumberLive\\CucumberLive\\src\\test\\resources\\Drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 
 		if(DriverType.equalsIgnoreCase("Edge"))
 
 		{
-			System.setProperty("webdriver.edge.driver", "D:\\CucumberLive\\src\\test\\resources\\Drivers\\msedgedriver.exe");
+			System.setProperty("webdriver.edge.driver", "C:\\Users\\Amit\\CucumberLive\\CucumberLive\\src\\test\\resources\\Drivers\\msedgedriver.exe");
 			driver = new EdgeDriver();
 		}
 
 		else if(DriverType.equalsIgnoreCase("Firefox"))
 
 		{
-			System.setProperty("webdriver.gecko.driver", "D:\\CucumberLive\\src\\test\\resources\\Drivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "C:\\Users\\Amit\\CucumberLive\\CucumberLive\\src\\test\\resources\\Drivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
 		return driver;
